@@ -1,0 +1,66 @@
+
+
+
+
+
+[workspace]
+resolver = "2"
+members = [
+    "fm-lib",
+        "fm-server",
+    #    "t24_near",
+    #    "near_indexer",
+    #    "t24_near_indexer",
+    #    "t24_test",
+    #    "t24_zk_program",
+    #    "t24_zk_script"
+]
+#
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_repr = "0.1.19"
+mongodb = "3.1.0"
+tokio = {version = "1.32.0"}
+hmac = "0.12.1"
+sha2 = "0.10.8"
+twilio = "1.1.0"
+rand = "0.8.5"
+actix-web = "4.1"
+hex = "0.4.3"
+#clap = {version = "4.5.16"}
+#alloy-sol-types = "0.7.7"
+#tokio = { version = "1.28", default-features = false }
+#actix = "0.13.0"
+#actix-http = "3.6"
+#actix-rt = "2"
+#actix-web = "4.1"
+#near-sdk = { version = "5.4.0"}
+#near-workspaces = { version = "0.12.0", features = ["unstable"] }
+#near-cli-rs = {version = "0.14.3", default-features = false}
+#near-jsonrpc-client = {git="https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-account-id = { version = "1.0.0-alpha.4", features = [
+#    "internal_unstable",
+#    "serde",
+#    "borsh",
+#] }
+#near-jsonrpc-primitives = {git="https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-indexer = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#node-runtime = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-crypto = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-client = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-indexer-primitives = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-primitives = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-chain-configs = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-o11y = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-parameters = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#near-store = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#nearcore = { git = "https://github.com/near/nearcore", rev="1877e3dd2bf69908aa092e4d412eb417b8084c15" }
+#rocksdb = { version = "0.21.0", default-features = false, features = [
+#    "snappy",
+#    "lz4",
+#    "zstd",
+#    "zlib",
+#    "jemalloc",
+#] }
+
