@@ -21,10 +21,10 @@ pub async fn mongo() -> Database {
     // Get a handle to the cluster
     let client = Client::with_options(client_options).unwrap();
     // Ping the server to see if you can connect to the cluster
-    client
-        .database("admin")
-        .run_command(doc! {"ping": 1})
-        .await.unwrap();
+    // client
+    //     .database("admin")
+    //     .run_command(doc! {"ping": 1})
+    //     .await.unwrap();
     println!("Pinged your deployment. You successfully connected to MongoDB!");
     client.database("fm")
 }

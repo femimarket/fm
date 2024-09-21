@@ -673,6 +673,8 @@ name = "fm-server"
 version = "0.1.0"
 dependencies = [
  "actix-web",
+ "fm-lib",
+ "mongodb",
 ]
 
 [[package]]

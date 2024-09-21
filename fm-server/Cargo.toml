@@ -5,3 +5,5 @@ edition = "2021"
 
 [dependencies]
 actix-web = {workspace = true}
+fm-lib = {workspace = true}
+mongodb = { workspace = true, features = ["sync"] }

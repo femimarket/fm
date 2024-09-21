@@ -5,7 +5,7 @@ use sha2::Sha256;
 
 const SECRET: OnceCell<String> = OnceCell::new();
 
-fn secret() -> String {
+pub fn secret() -> String {
     SECRET.get_or_init(|| {
         std::env::var("SECRET").unwrap()
     }).to_string()

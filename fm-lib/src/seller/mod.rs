@@ -26,13 +26,12 @@ pub struct Seller {
 
 pub async fn create_seller(
     mongo:&Database,
-    user: Seller
-)  {
+    user: &Seller
+) -> bool {
     verify_and_insert_many::<Seller>(
         mongo,
         &user.user_id,
         SELLERS,
         user.clone()
-    ).await;
-
+    ).await
 }

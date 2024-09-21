@@ -31,19 +31,18 @@ pub async  fn verify_and_insert_many<T:Send+Sync+Serialize>(
     user_id:&str,
     collection_name:&str,
     data:T
-){
+)->bool{
     let res = get_approved_user(
         mongo,
         user_id
     ).await;
-
-
     match (res,verify_user(user_id)) {
         (Some(_), Ok(_)) => {
             mongo.collection::<T>(collection_name).insert_many(vec![
                 data
             ]).await.unwrap();
+            true
         }
-        _ => {}
+        _ => false
     }
 }

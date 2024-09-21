@@ -1,0 +1,19 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=RustRover
+
+### POST create seller
+POST http://localhost:8081/create-seller
+Content-Type: application/json
+
+{
+  "user_id": "String",
+  "name": "String",
+  "description": "String",
+  "price": 100,
+  "from_lat": 1.280930,
+  "from_lng": 103.845830,
+  "from_rad": 10,
+  "from_time_start": 1726876800000,
+  "from_time_end": 1726963199000
+}
