@@ -8,6 +8,7 @@ resolver = "2"
 members = [
     "fm-lib",
         "fm-server",
+    "fm-macros"
     #    "t24_near",
     #    "near_indexer",
     #    "t24_near_indexer",
@@ -28,6 +29,7 @@ twilio = "1.1.0"
 rand = "0.8.5"
 actix-web = "4.1"
 hex = "0.4.3"
+fm-macros = {path = "fm-macros"}
 #clap = {version = "4.5.16"}
 #alloy-sol-types = "0.7.7"
 #tokio = { version = "1.28", default-features = false }

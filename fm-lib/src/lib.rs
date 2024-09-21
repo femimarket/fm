@@ -6,5 +6,7 @@ pub mod user;
 pub mod buyer;
 pub mod courier;
 pub mod seller;
+pub mod instrument;
+pub mod tick;
 
 

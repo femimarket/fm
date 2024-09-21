@@ -12,6 +12,7 @@ sha2 = {workspace = true}
 twilio = {workspace = true}
 rand = {workspace = true}
 hex = {workspace = true}
+fm-macros = {workspace = true}
 hex-literal = "0.4.1"
 tokio = {workspace = true, features = ["full"]}
 mongodb = { workspace = true, features = ["sync"] }
