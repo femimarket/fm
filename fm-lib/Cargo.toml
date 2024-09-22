@@ -16,3 +16,4 @@ fm-macros = {workspace = true}
 hex-literal = "0.4.1"
 tokio = {workspace = true, features = ["full"]}
 mongodb = { workspace = true, features = ["sync"] }
+ethers = "2.0"

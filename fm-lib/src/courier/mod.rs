@@ -1,4 +1,4 @@
-
+use hmac::digest::MacError;
 use mongodb::bson::doc;
 use mongodb::Database;
 use serde::{Deserialize, Serialize};
@@ -28,10 +28,17 @@ pub struct Courier {
 }
 
 
-pub async fn create_buyer(
+pub async fn create_courier(
     mongo:&Database,
-    user: Courier
+    user: Courier,
 )  {
+
+    match verify_user(&user.user_id) {
+        Ok(_) => {
+
+        }
+        Err(_) => {}
+    }
     verify_and_insert_many::<Courier>(
         mongo,
         &user.user_id,
