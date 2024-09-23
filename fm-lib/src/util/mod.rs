@@ -3,10 +3,12 @@ pub mod mongo;
 pub mod secret;
 pub mod constants;
 pub mod user;
+pub mod near;
 
 use std::collections::HashMap;
 use hmac::digest::MacError;
 use hmac::{Hmac, Mac};
+use mongodb::bson::doc;
 use mongodb::Database;
 use serde::Serialize;
 use serde_json::Value;
@@ -26,7 +28,7 @@ pub fn fm_encode(data: impl Serialize) -> String {
     serde_json::to_string(&result).unwrap()
 }
 
-pub async  fn verify_and_insert_many<T:Send+Sync+Serialize>(
+pub async fn verify_and_insert_many<T:Send+Sync+Serialize>(
     mongo:&Database,
     user_id:&str,
     collection_name:&str,
@@ -44,5 +46,19 @@ pub async  fn verify_and_insert_many<T:Send+Sync+Serialize>(
             true
         }
         _ => false
+    }
+}
+
+pub fn switch_trade_account(account:&str) ->String{
+    match account {
+        "oanda" => account.to_string(),
+        _ => panic!("unknown trade_account")
+    }
+}
+
+pub fn switch_crypto_account(account:&str) ->String{
+    match account {
+        "near" => account.to_string(),
+        _ => panic!("unknown crypto_account")
     }
 }

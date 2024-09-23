@@ -31,6 +31,14 @@ actix-web = "4.1"
 hex = "0.4.3"
 fm-macros = {path = "fm-macros"}
 fm-lib = {path = "fm-lib"}
+reqwest = { version = "0.12.5", default-features = false, features = ["json", "blocking", "cookies","rustls-tls"] }
+near-account-id = { version = "1.0.0-alpha.4", features = [
+    "internal_unstable",
+    "serde",
+] }
+near-workspaces = { version = "0.12.0", features = ["unstable"] }
+clap = {version = "4.5.16", features = ["derive"]}
+bs58 = "0.5.1"
 #clap = {version = "4.5.16"}
 #alloy-sol-types = "0.7.7"
 #tokio = { version = "1.28", default-features = false }

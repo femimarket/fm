@@ -2,18 +2,24 @@
 GET https://examples.http-client.intellij.net/get
     ?generated-in=RustRover
 
-### POST create seller
-POST http://localhost:8081/create-seller
+### POST create unapproved oanda user
+POST http://localhost:8081/create-unapproved-user?trade_account=oanda
 Content-Type: application/json
 
-{
-  "user_id": "String",
-  "name": "String",
-  "description": "String",
-  "price": 100,
-  "from_lat": 1.280930,
-  "from_lng": 103.845830,
-  "from_rad": 10,
-  "from_time_start": 1726876800000,
-  "from_time_end": 1726963199000
-}
+> {%
+    client.test("Create oanda trade account", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+        client.global.set("code", response.body)
+    });
+%}
+
+### POST approve oanda user
+POST http://localhost:8081/create-unapproved-user?trade_account=oanda
+Content-Type: application/json
+
+> {%
+    client.test("Create oanda trade account", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+        client.global.set("code", response.body)
+    });
+%}
